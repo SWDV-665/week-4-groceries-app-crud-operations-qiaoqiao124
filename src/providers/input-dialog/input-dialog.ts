@@ -16,16 +16,7 @@ export class InputDialogProvider {
   }
 
   showPrompt(item?, index?) {
-    // var select = document.createElement('ion-item');
-    // select.innerHTML = `
-    //   <ion-label>Gender</ion-label>
-    //   <ion-select [(ngModel)]="gender">
-    //     <ion-option value="f">Female</ion-option>
-    //     <ion-option value="m">Male</ion-option>
-    //   </ion-select>
-    // `;
-    //aaa
-
+  
     const prompt = this.alertCtrl.create({
       title: item? 'Edit Item': 'Add Item',
       message: item? "Please edit item" : "Please add item",
@@ -35,27 +26,11 @@ export class InputDialogProvider {
           placeholder: 'Name',
           value: item? item.name: null
         },
-        // {
-        //   type: 'radio',
-        //   name: "1",
-        //   label: '1',
-        //   value: '1',
-        //   checked: index == 1
-        // },
-        // {
-        //   type: 'radio',
-        //   name: "2",
-        //   label: '2',
-        //   value: '2',
-        //   checked: index == 2
-        // }
+  
         {
           name: 'quantity',
           placeholder: 'Quantity',
-          // handler: index => {
-          //   console.log('quantity', index)
-
-          // }
+          
           value: item? item.quantity: null
         }
       ],

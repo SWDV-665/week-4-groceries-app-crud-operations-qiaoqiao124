@@ -257,15 +257,6 @@ var InputDialogProvider = /** @class */ (function () {
         console.log('Hello InputDialogProvider Provider');
     }
     InputDialogProvider.prototype.showPrompt = function (item, index) {
-        // var select = document.createElement('ion-item');
-        // select.innerHTML = `
-        //   <ion-label>Gender</ion-label>
-        //   <ion-select [(ngModel)]="gender">
-        //     <ion-option value="f">Female</ion-option>
-        //     <ion-option value="m">Male</ion-option>
-        //   </ion-select>
-        // `;
-        //aaa
         var _this = this;
         var prompt = this.alertCtrl.create({
             title: item ? 'Edit Item' : 'Add Item',
@@ -276,26 +267,9 @@ var InputDialogProvider = /** @class */ (function () {
                     placeholder: 'Name',
                     value: item ? item.name : null
                 },
-                // {
-                //   type: 'radio',
-                //   name: "1",
-                //   label: '1',
-                //   value: '1',
-                //   checked: index == 1
-                // },
-                // {
-                //   type: 'radio',
-                //   name: "2",
-                //   label: '2',
-                //   value: '2',
-                //   checked: index == 2
-                // }
                 {
                     name: 'quantity',
                     placeholder: 'Quantity',
-                    // handler: index => {
-                    //   console.log('quantity', index)
-                    // }
                     value: item ? item.quantity : null
                 }
             ],
@@ -325,9 +299,10 @@ var InputDialogProvider = /** @class */ (function () {
     ;
     InputDialogProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_0__providers_groceries_service_groceries_service__["a" /* GroceriesServiceProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* AlertController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__providers_groceries_service_groceries_service__["a" /* GroceriesServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_groceries_service_groceries_service__["a" /* GroceriesServiceProvider */]) === "function" && _b || Object])
     ], InputDialogProvider);
     return InputDialogProvider;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=input-dialog.js.map
